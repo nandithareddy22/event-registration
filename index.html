@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Event Registration</h1>
+        <p class="subtitle">Register now to reserve your spot!</p>
+
+        <form id="registrationForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your phone number"
+                   pattern="[0-9]{10}"
+                   title="Enter a 10-digit phone number"
+                   required>
+
+            <label for="event">Select Event</label>
+            <select id="event" name="event" required>
+                <option value="">-- Choose an event --</option>
+                <option value="Web Development Workshop">
+                    Web Development Workshop
+                </option>
+                <option value="Coding Competition">
+                    Coding Competition
+                </option>
+                <option value="Tech Seminar">
+                    Tech Seminar
+                </option>
+                <option value="Cultural Fest">
+                    Cultural Fest
+                </option>
+            </select>
+
+            <label for="date">Event Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Register Now</button>
+        </form>
+
+        <p id="message" role="status" aria-live="polite"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
